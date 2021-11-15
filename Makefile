@@ -220,12 +220,12 @@ docker-push-all:
 	make docker-manifest-push
 
 flannel-git:
-	ARCH=amd64 REGISTRY=quay.io/coreos/flannel-git make clean dist/flanneld-$(TAG)-amd64.docker docker-push docker-manifest-amend
-	ARCH=arm REGISTRY=quay.io/coreos/flannel-git make clean dist/flanneld-$(TAG)-arm.docker docker-push docker-manifest-amend
-	ARCH=arm64 REGISTRY=quay.io/coreos/flannel-git make clean dist/flanneld-$(TAG)-arm64.docker docker-push docker-manifest-amend
-	ARCH=ppc64le REGISTRY=quay.io/coreos/flannel-git make clean dist/flanneld-$(TAG)-ppc64le.docker docker-push docker-manifest-amend
-	ARCH=s390x REGISTRY=quay.io/coreos/flannel-git make clean dist/flanneld-$(TAG)-s390x.docker docker-push docker-manifest-amend
-	REGISTRY=quay.io/coreos/flannel-git make docker-manifest-push
+	ARCH=amd64 REGISTRY=quay.io/prabhav/flannel-git make clean dist/flanneld-$(TAG)-amd64.docker docker-push docker-manifest-amend
+	ARCH=arm REGISTRY=quay.io/prabhav/flannel-git make clean dist/flanneld-$(TAG)-arm.docker docker-push docker-manifest-amend
+	ARCH=arm64 REGISTRY=quay.io/prabhav/flannel-git make clean dist/flanneld-$(TAG)-arm64.docker docker-push docker-manifest-amend
+	ARCH=ppc64le REGISTRY=quay.io/prabhav/flannel-git make clean dist/flanneld-$(TAG)-ppc64le.docker docker-push docker-manifest-amend
+	ARCH=s390x REGISTRY=quay.io/prabhav/flannel-git make clean dist/flanneld-$(TAG)-s390x.docker docker-push docker-manifest-amend
+	REGISTRY=quay.io/prabhav/flannel-git make docker-manifest-push
 
 install:
 	# This is intended as just a developer convenience to help speed up non-containerized builds
