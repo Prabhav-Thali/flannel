@@ -48,7 +48,6 @@ jobs:
           context: .
           file: Dockerfile.amd64
           push: false
-          tags: ${{ steps.meta.outputs.tags }}-amd64
 
       - name: Build Docker image for arm
         uses: docker/build-push-action@v2
@@ -56,7 +55,6 @@ jobs:
           context: .
           file: Dockerfile.arm
           push: false
-          tags: ${{ steps.meta.outputs.tags }}-arm
 
       - name: Build Docker image for arm64
         uses: docker/build-push-action@v2
@@ -64,7 +62,6 @@ jobs:
           context: .
           file: Dockerfile.arm64
           push: false
-          tags: ${{ steps.meta.outputs.tags }}-arm64
 
       - name: Build Docker image for s390x
         uses: docker/build-push-action@v2
@@ -72,7 +69,6 @@ jobs:
           context: .
           file: Dockerfile.s390x
           push: false
-          tags: ${{ steps.meta.outputs.tags }}-s390x
 
       - name: Build Docker image for ppc64le
         uses: docker/build-push-action@v2
@@ -80,7 +76,6 @@ jobs:
           context: .
           file: Dockerfile.ppc64le
           push: false
-          tags: ${{ steps.meta.outputs.tags }}-ppc64le
 
 # name: build flannel
 
